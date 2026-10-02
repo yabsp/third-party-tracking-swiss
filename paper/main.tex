@@ -1,0 +1,104 @@
+% =============================================================
+%  Scientific Writing for Computer Scientists – Final Paper
+%  Compile:  latexmk -pdf main.tex      (or Overleaf: just upload)
+%  Word count (main text only):  texcount -inc -sum -1 main.tex
+% =============================================================
+\documentclass[conference]{IEEEtran}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}        % figures
+\usepackage{booktabs}        % nicer tables (\toprule, \midrule, \bottomrule)
+\usepackage{amsmath}
+\usepackage{cite}            % IEEE-style numeric citations [1], [2]-[4]
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+
+\graphicspath{{figures/}}    % analysis scripts save PDFs into figures/
+
+\begin{document}
+
+\title{Tracking Before Consent:\\Third-Party Tracking on Swiss Websites}
+
+\author{\IEEEauthorblockN{Your Name}
+\IEEEauthorblockA{Department of Mathematics and Computer Science\\
+University of Basel, Switzerland\\
+your.name@unibas.ch}}
+
+\maketitle
+
+% ~150 words -- write this LAST
+\begin{abstract}
+Abstract goes here.
+\end{abstract}
+
+\begin{IEEEkeywords}
+web tracking, privacy, measurement, cookies, consent
+\end{IEEEkeywords}
+
+% ~300--400 words, ends with your research questions
+\section{Introduction}
+Third-party tracking has been studied extensively~\cite{mayer2012thirdparty, englehardt2016census}.
+This paper addresses the following research questions:
+\begin{itemize}
+  \item \textbf{RQ1:} Do Swiss websites track visitors before consent more often than comparable German websites?
+  \item \textbf{RQ2:} How does tracking differ across Swiss sectors?
+  \item \textbf{RQ3:} Which companies receive the data?
+\end{itemize}
+
+% ~600--700 words, 12 publications
+\section{Related Work}
+
+% ~900--1,000 words
+\section{Methods and Materials}
+\subsection{Site Selection}
+\subsection{Crawler}
+\subsection{Tracker Classification}
+\subsection{Statistical Analysis}
+
+% ~700--800 words, with figures and tables
+\section{Results}
+
+% Example figure -- uncomment once figures/trackers_by_sector.pdf exists
+% \begin{figure}[t]
+%   \centering
+%   \includegraphics[width=\columnwidth]{trackers_by_sector}
+%   \caption{Third-party tracker domains per site, by country and sector.}
+%   \label{fig:sectors}
+% \end{figure}
+
+% Example table
+\begin{table}[t]
+  \centering
+  \caption{Share of sites tracking before consent}
+  \label{tab:share}
+  \begin{tabular}{lrr}
+    \toprule
+    Sector & Switzerland & Germany \\
+    \midrule
+    Public administration & --\,\% & --\,\% \\
+    News                  & --\,\% & --\,\% \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+As Table~\ref{tab:share} shows, \ldots
+
+% ~300--400 words
+\section{Conclusions}
+
+% ---------------- not counted in the word limit ----------------
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\clearpage
+\onecolumn
+\appendices
+\section{Declaration of Authorship}
+% Insert the signed University of Basel declaration, e.g. as a scanned PDF:
+% \includegraphics[width=\textwidth]{declaration_signed.pdf}
+
+\section{Record of AI Tools Used}
+% Tool, purpose, date -- copy from ai-use-log.md in the repo root
+
+\end{document}
